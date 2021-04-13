@@ -1,0 +1,111 @@
+<HEAD>
+<title>
+	
+
+</title>
+<body>
+	
+	<body style="background-color:powderblue;">
+     
+
+	<center>
+	
+	<form action = {% url 'cancer_predict' %}>
+	{%csrf_token%}
+	<b> Welcome to Breast Cancer Predication Page</b><br></br><br></br>
+	<div class="form">
+	<label><b>radius mean</b></label>	
+		<input type="text" name="radius_mean" value ='' required><br></br>
+	<label><b>texture mean</b></label>		
+		<input type="text" name="texture_mean" required><br></br>
+	<label><b>perimeter mean</b></label>	
+		<input type="text" name="perimeter_mean" required><br></br>
+	<label><b>area mean</b></label>	
+		<input type="text" name="area_mean" required><br></br>
+	<label><b>smoothness mean</b></label>	
+		<input type="text" name="smoothness_mean" required><br></br>
+	<label><b>compactness mean</b></label>		
+		<input type="text" name="compactness_mean" required><br></br>
+	<label><b>concavity mean</b></label>		
+		<input type="text" name="concavity_mean" required><br></br>
+	<label><b>concave points mean</b></label>		
+		<input type="text" name="concave_points_mean" required><br></br>
+	<label><b>symmetry mean</b></label>	
+		<input type="text" name="symmetry_mean" required><br></br>
+	<label><b>fractal dimension mean</b></label>	
+		<input type="text" name="fractal_dimension_mean" required><br></br>
+	<label><b>radius se</b></label>	
+		<input type="text" name="radius_se" required><br></br>
+	<label><b>texture se</b></label>
+		<input type="text" name="texture_se" required><br></br>
+	<label><b>perimeter se</b></label>	
+		<input type="text" name="perimeter_se" required><br></br>
+	<label><b>area se</b></label>		
+		<input type="text" name="area_se" required><br></br>
+	<label><b>smoothness se</b></label>	
+		<input type="text" name="smoothness_se" required><br></br>
+	<label><b>compactness se</b></label>	
+		<input type="text" name="compactness_se" required><br></br>
+	<label><b>cconcavity se</b></label>	
+		<input type="text" name="concavity_se" required><br></br>
+	<label><b>concave points se</b></label>	
+		<input type="text" name="concave_points_se" required><br></br>
+	<label><b>symmetry se</b></label>	
+		<input type="text" name="symmetry_se" required><br></br>
+	<label><b>fractal dimension se</b></label>	
+		<input type="text" name="fractal_dimension_se" required><br></br>
+	<label><b>radius worst</b></label>		
+		<input type="text" name="radius_worst" required><br></br>
+	<label><b>texture worst</b></label>		
+		<input type="text" name="texture_worst" required><br></br>
+	<label><b>perimeter worst</b></label>	
+		<input type="text" name="perimeter_worst" required><br></br>
+	<label><b>area worst</b></label>		
+		<input type="text" name="area_worst" required><br></br>
+	<label><b>smoothness worst</b></label>	
+		<input type="text" name="smoothness_worst" required><br></br>
+	<label><b>compactness worst</b></label>		
+		<input type="text" name="compactness_worst" required><br></br>
+	<label><b>concavity worst</b></label>		
+		<input type="text" name="concavity_worst" required><br></br>
+	<label><b>concavepoints worst</b></label>		
+		<input type="text" name="concave_points_worst" required><br></br>
+	<label><b>symmetry worst</b></label>		
+		<input type="text" name="symmetry_worst" required><br></br>
+	<label><b>fractaldimension worst</b></label>	
+		<input type="text" name="fractal_dimension_worst" required><br></br>
+
+		<input type="Submit" name="submit">
+	</div>
+	
+
+
+	 {%if final_result %}
+
+	 <B>The Prediction of the Breast Cancer is :{{final_result}}</B>
+
+	 {%endif%}
+
+	</center>
+	</form> 
+
+</body>
+
+<style type="text/css">
+	label{
+display:inline-block;
+width:200px;
+margin-right:30px;
+text-align:right;
+}
+
+	
+fieldset{
+border:none;
+width:500px;
+margin:0px auto;
+}
+
+
+</style>
+</html>
